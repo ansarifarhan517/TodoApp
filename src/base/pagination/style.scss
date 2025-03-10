@@ -1,0 +1,41 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__records-per-page {
+    display: flex;
+    align-items: baseline;
+    gap: 8px; 
+
+    &-dropdown {
+      width: 150px;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__nav-button,
+  &__page-button {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__page-button.active {
+    background-color: #007aff;
+    color: #fff;
+    border-color: #007aff;
+  }
+}

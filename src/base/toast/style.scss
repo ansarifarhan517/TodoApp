@@ -1,0 +1,89 @@
+@use '../../sass/constant.scss' as *;
+
+.toast {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  position: fixed;
+  height: auto;
+  width : 400px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  animation-name: toast;
+  animation-duration: 0.5s;
+
+  &__title-icon-div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+
+  &--delete {
+    background-color: #ffffff;
+  }
+  &--warning {
+    background-color: #ffffff ;
+  }
+  &--info {
+    background-color: #ffffff;
+  }
+  &--success {
+    background-color: #ffffff;
+  }
+
+  &__icon {
+    &--delete {
+      color: #dc3803;
+    }
+    &--warning {
+      color: $warning;
+    }
+    &--info {
+      color: $info;
+    }
+    &--success {
+      color: $success;
+    }
+  }
+
+  &__message-container {
+    color: $gray-darker;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+  }
+
+  &__confirm-button,
+  &__cancel-button {
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+
+  &__confirm-button--delete {
+    background-color: #dc3803;
+    color: white;
+    border-color: $error;
+  }
+
+  &__cancel-button--delete {
+    color: $gray-dark;
+    border-color: $gray;
+  }
+}
+
+@keyframes toast {
+  from {right: -40% }
+  to {right: 10px;}
+}

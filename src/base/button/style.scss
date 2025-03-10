@@ -1,0 +1,80 @@
+@use '../../sass/constant.scss' as *;
+
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  padding: 8px 24px;
+  border-radius: 4px;
+  &--loading {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 45%;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-color: $white;
+      border-left-color: transparent;
+      animation: loading 0.7s infinite linear;
+    }
+  }
+  &--primary {
+    background: $primary;
+    color: $white;
+    &-loading {
+      color: $primary;
+      pointer-events: none;
+    }
+  }
+  &--error {
+    background: $error;
+    color: $white;
+    &-loading {
+      color: $error;
+      pointer-events: none;
+    }
+  }
+  &--secondary {
+    background: $white;
+    color: $primary;
+    border: 1px solid $primary;
+    &-loading {
+      color: $white;
+      pointer-events: none;
+      &:after {
+        border-color: $primary;
+        border-left-color: transparent;
+      }
+    }
+  }
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &--block {
+    width: 100%;
+  }
+  &--with-icon {
+    height: auto;
+    padding: 4px 16px;
+  }
+}

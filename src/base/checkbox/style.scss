@@ -1,0 +1,43 @@
+@use '../../sass/constant.scss' as *;
+
+
+.checkbox {
+  position: relative;
+  padding-left: 30px;
+
+  &__label::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px; 
+    border: 1px solid $black; 
+    left: 0;  
+    top: 3px;
+  }
+
+  &--active &__label {
+    &::before {
+      background-color: $primary-light;
+    }
+
+    &::after {
+      content: "\f00c";
+      font-family: "FontAwesome";
+      position: absolute;
+      left: 1px;
+      top: 0px;
+      color: $white;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+

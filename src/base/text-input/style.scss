@@ -1,0 +1,39 @@
+@use '../../sass/constant.scss' as *;
+
+
+.text-input {
+  padding-bottom: 16px;
+  color: $gray-darker;
+
+  &__label {
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  &__message-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__validation-message {
+    color: $error;
+  }
+
+  &__star {
+    color: $error;
+  }
+
+  &__control {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $gray-light;
+    padding: 8px;
+    &--invalid {
+      border-color: $error;
+    }
+
+    &--text-area {
+      height: 150px;
+    }
+  }
+}

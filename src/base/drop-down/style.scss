@@ -1,0 +1,65 @@
+@use '../../sass/constant.scss' as *;
+
+
+.dropdown-input {
+  padding-bottom: 16px;
+  color: $gray-darker;
+  position: relative;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    right: 11px;
+    bottom: 26px;
+    border-top-color: $gray-dark;
+    cursor: pointer;
+  }
+
+  
+
+  &__label {
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  &__star {
+    color: $error;
+  }
+
+  &__control {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $gray-light;
+    padding: 8px;
+    &--invalid {
+      border-color: $error;
+    }
+
+    &--disabled {
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    
+  }
+
+  &--multiple { 
+    padding-bottom: 0; 
+
+    &:before {
+      top: 21px;
+    }
+    
+    .dropdown-input__control {
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+  }
+
+ 
+
+}

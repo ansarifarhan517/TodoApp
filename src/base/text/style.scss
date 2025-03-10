@@ -1,0 +1,103 @@
+@use '../../sass/constant.scss' as *;
+
+.text {
+  &--center {
+    text-align: center;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }  
+  &--xxs {
+    font-size: 11px;
+    line-height: 1.56;
+  }
+  &--xs {
+    font-size: 12px;
+    line-height: 1.56;
+  }
+  &--s {
+    font-size: 14px;
+    line-height: 1.56;
+  }
+  &--m {
+    font-size: 16px;
+    line-height: 1.56;
+  }
+  &--l {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  &--xl {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  &--xxl {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  &--xxxl {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  &--thin {
+    font-weight: 300;
+  }
+  &--normal {
+    font-weight: 400;
+  }
+  &--semi-bold {
+    font-weight: 500;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--primary {
+    color: $primary;
+  }  
+  &--success {
+    color: $success
+  }  
+  &--info {
+    color: $info
+  }  
+  &--warning {
+    color: $warning
+  }  
+  &--error {
+    color: $error
+  }  
+  &--white {
+    color: $white;
+  }  
+  &--black {
+    color: $black;
+  }  
+  &--gray-darker {
+    color: $gray-darker;
+  }  
+  &--gray-dark {
+    color: $gray-dark;
+  }  
+  &--gray {
+    color: $gray;
+  }  
+  &--gray-light {
+    color: $gray-light;
+  }  
+  &--gray-lighter {
+    color: $gray-lighter;
+  }  
+  &--gray-extra-lighter {
+    color: $gray-extra-lighter
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--lowercase {
+    text-transform: lowercase;
+  }
+
+}

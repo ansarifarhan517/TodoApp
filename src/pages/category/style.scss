@@ -1,0 +1,99 @@
+@use '../../sass/constant.scss' as *;
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  &__title,
+  &__heading {
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__add-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__add-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    &-dropdown {
+      width: 200px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__add-button {
+    height: 40px;
+    flex-grow: 0;
+    margin-top: 0.5rem;
+    border-radius: 0;
+  }
+
+  &__add-button-fav {
+    height: 40px;
+    flex-grow: 0;
+    margin-top: 0.5rem;
+    border-radius: 0;
+    border: 1px solid black;
+    color: black !important;
+
+    &--bookMarked {
+      border: 1px solid red;
+      color: red !important;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-select-all {
+      display: flex;
+      align-items: baseline;
+      gap: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &-title-div {
+      display: flex;
+      gap: 10px;
+    }
+
+    &-title {
+      padding: 5px;
+    }
+
+    &-actions {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+
+      &-dropdown {
+        width: 150px;
+      }
+    }
+  }
+}

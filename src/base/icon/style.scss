@@ -1,0 +1,32 @@
+@use '../../sass/constant.scss' as *;
+
+
+.icon {
+  &--primary {
+    color: $primary;
+  }
+  &--success {
+    color: $success
+  }
+  &--info {
+    color: $info
+  }
+  &--warning {
+    color: $warning
+  }
+  &--error {
+    color: $error
+  }
+  &--white {
+    color: $white;
+  }
+  &--small {
+    font-size: 16px;
+  }
+  &--medium {
+    font-size: 28px;
+  }
+  &--large {
+    font-size: 36px;
+  }
+}
